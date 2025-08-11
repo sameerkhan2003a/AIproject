@@ -1,0 +1,30 @@
+def get_response(index, tone):
+    # Formal responses
+    formal = [
+        "It is a pleasure to meet you.",
+        "I appreciate you sharing that. I hope your day improves.",
+        "That sounds like a wonderful and enriching activity.",
+        "An admirable pursuit. I wish you continued success.",
+        "That is delightful to hear. I enjoy these conversations as well.",
+        "I hope your plans unfold smoothly. Wishing you the very best."
+    ]
+
+    # Informal responses
+    informal = [
+        "Nice to meet ya!",
+        "Thanks for sharing. Hope your day's awesome!",
+        "Cool! That sounds like fun.",
+        "Nice! Keep at it!",
+        "Sweet! I like chatting too.",
+        "Sounds fun! Enjoy the rest of your day!"
+    ]
+
+    return formal[index] if tone == "formal" else informal[index]
+
+def chatbot():
+    print("Welcome to ChatBot!")
+    tone = input("Would you like formal or informal responses? (Type 'formal' or 'informal'): ").strip().lower()
+
+    if tone not in ['formal', 'informal']:
+        print("Invalid input. Defaulting to formal responses.")
+        tone = 'formal'
